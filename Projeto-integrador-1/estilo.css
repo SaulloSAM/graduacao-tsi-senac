@@ -1,0 +1,215 @@
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Estilo Geral do HTML */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Josefin Sans', sans-serif;
+
+
+
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Container Geral do Site */
+#container {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  margin-top: 50px;
+}
+
+#quemSomos, #informacao {
+  background-color: #ffc40d;
+}
+
+#box {
+  margin: 0 auto;
+  width: 1080px;
+  height: 500px;
+  margin-top: 50px;
+}
+
+#up {
+  padding: 10px 10px;
+  float: right;
+}
+
+#down {
+  padding: 10px 10px;
+  float: right;
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Slide */
+.slide {
+  position: relative;
+  padding: 5% 5%;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .6);
+  transform-style: inherit;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Posição das informações */
+
+#info-page01, #info-page02, #info-page03, #info-page04 {
+  margin: 0 auto;
+  width: 1080px;
+  height: 450px;
+  margin-top: 50px;
+}
+
+
+#info-page01 img {
+  margin: auto 290px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Josefin Sans:700', sans-serif;
+  font-size: 40px;
+
+}
+
+.texto-h1{
+  margin-top: -50px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Pagina Quem Somos */
+
+#info-page01{
+  display: table;
+}
+
+#img-quemSomos{
+  display: table-cell;
+  float: left;
+  margin-left: 106px;
+}
+
+#texto-quemSomos{
+  display: table-cell;
+  float: left;
+  width: 600px;
+  margin-top: 71px;
+  margin-left: 43px;
+  text-align: justify;
+  font-size: large;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Pagina Tutorial */
+.estilizacao{
+  display: block;
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 1090px;
+  height: 450px;
+  margin-top: 50px 
+}
+.estilizacao li{
+  position: relative;
+  display: block;
+  width: 218px; /* tamanho da largura das imagens*/
+  height: 284px;
+  float: left;
+  margin: 26px; /*tamanho que sobrou */
+  cursor: pointer;
+  
+}
+
+.estilizacao li img {
+  width: 80%;
+  height: 100%;
+  display: block;
+  z-index: 9;
+  position: absolute;
+  transition: .5s;
+}
+
+.conteudo{
+  display: block;
+  width: 80%;
+  height: 25%;
+  margin-top: 213px;
+  background-color: #ffc40d;
+  overflow: hidden; /*deixa o texto embaixo*/
+  border-radius:5px; /*coloca uma borda*/
+  opacity: 0.8;
+}
+
+.estilizacao li:hover img{
+  margin-top: -60px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Pagina Informações */
+
+#info-page04{
+    display: table;
+}
+
+#download{
+  float: left;
+  margin-left: 107px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  text-align: center;
+  margin-top: 91px;
+}
+
+#download #logoh{
+  float: right;
+}
+
+#botao{
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #2e3192;
+  font-size: .9em;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+
+
+#dev{
+  display: table-cell;
+  float: left;
+  width: 600px;
+  margin-top: 71px;
+  margin-left: 102px;
+  text-align: center;
+}
+
+#dev h4{
+  text-align: 20px;
+}
+

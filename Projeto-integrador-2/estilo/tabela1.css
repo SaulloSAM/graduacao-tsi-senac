@@ -1,0 +1,49 @@
+/* Declaração de váriavel --------------------------------------------------- */
+/* Laranja Default #f76f00 */
+/* Verde Default   #008a8a */
+/* Fundo Default   #ffffff */
+
+a{
+  text-decoration: none;
+  color: #30a19f;
+}
+a:hover{
+  cursor: pointer;
+}
+
+
+/* Estilo Padrão - TABELAS -------------------------------------------------- */
+
+/* Conteiner Geral da tabela */
+.container-table{
+  width: 90%; height: 300px; position: absolute;
+  left: -45%; margin: 0px 50%; top: 150px;
+}
+
+/* Estilo da tabela */
+.table{
+  width: 100%; margin: 0 0 40px 0; display: table;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Estilo de cada lonha */
+.row{
+  display: table-row; background-color: rgba(247,117,10,0.3);
+  color: black;
+}
+.row:nth-of-type(odd){
+  background-color: rgba(247,117,10,0.1);
+}
+.row:nth-of-type(1){
+  background: #f76f00; color: white;
+}
+
+/* Estilo de cada celula APENAS PARA CATEGORIAS */
+.cell{
+  display: table-cell; height: auto;
+  padding: 5px 15px;
+}
+
+img.imgProduto {
+  width: 80px; height: 80px;
+}

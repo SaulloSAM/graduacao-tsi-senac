@@ -1,0 +1,92 @@
+﻿
+@Html.Partial("_LoginPartial")
+
+
+<!-- Fixed navbar -->  
+
+<section id="BarraTopoCentro">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <a href="@Url.Action("Index", "Home")"><img src="~/img/Gandalflogo.jpg" id="logo"/></a>
+    </div>
+    
+@using (@Html.BeginForm(actionName: "Pesquisar", controllerName: "Produto", method: FormMethod.Get)) // pega o arquivo da pasta controler ProdutoController
+{
+    <div class="col-xs- col-sm8 col-md-8 col-lg-8" id="pesquisa">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div id="imaginary_container">
+                        <div class="input-group stylish-input-group">
+                            <input type="text" class="form-control" name ="valor" id="principalSearch" placeholder="Pesquisar">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span style="font-size:20px" class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    
+  <!-- Campo Link para a pagina do Carrinho-->
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div id="boxcarrinho">
+            <div id="qtCart"><span class="cart-count">0</span></div>
+            <a href="@Url.Action("Carrinho", "Produto")" id="btn-my-cart" class="btn btn-type-2">
+                <span style="font-size:88px;color:#222;" class="glyphicon glyphicon-shopping-cart"></span>
+           </a>      
+        </div>
+    </div>
+
+</section>
+
+<nav class="navbar navbar-inverse menuBars">
+    <div class="container navbar-cen ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                @Html.Action("Menu", "Categoria")
+            </div>
+
+        </div>
+</nav>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+<script>
+    /*
+        Usamos o Seletor de Id #.
+        Usamos o Atravessador children.
+        Usamos o Manipulador addClass, removeClass, Html (get e set).
+    */
+    var elemento = $("#navbar").children().children().children();
+    elemento.addClass("navbar-nav").addClass("nav").removeClass("navigation-menu");
+    var menuOriginal = elemento.html();
+    elemento.html("<li><a href='@Url.Action("Index", "Home")'>Home</a></li>" + menuOriginal);
+
+    $("#logo").mouseover(function ()
+    {
+        $(this).css("opacity", "0.5");
+    })
+
+    $("#logo").mouseout(function ()
+    {
+        $(this).css("opacity", "1");
+    })
+
+    $("#logo").fadeIn();
+</script>
+
+

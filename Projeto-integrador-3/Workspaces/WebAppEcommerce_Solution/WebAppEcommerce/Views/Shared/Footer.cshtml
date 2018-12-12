@@ -1,0 +1,61 @@
+﻿<footer id="footer-Section">
+    <div class="footer-top-layout">
+        <div class="container">
+            <div class="row">
+                <div class="OurBlog">
+                    <h4>Gandalf Geek Store</h4>
+                    <p>Projeto Integrador 3 - Loja Virtual - Sistema para Internet (Senac)</p>
+                    <div class="post-blog-date">Segundo Semestre 2017</div>
+                </div>
+                <div class=" col-lg-8 col-lg-offset-2">
+                    <div class="col-sm-4">
+                        <div class="footer-col-item">
+                            <h4>Desenvolvedores</h4>
+                            <address>
+                                <p>Angela</p>
+                                <p>Joan</p>
+                                <p>Maria</p>
+                                <p>Mateus</p>
+                                <p>Saulo</p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer-col-item">
+                            <h4>Entre em contato</h4>
+                            <div class="item-contact">
+                                <a href="mailto:info@gandalfgeek.com"><span class="link-id">@Html.Raw("@")</span>:<span>angelagraciete84@gandalfgeek.com</span></a>
+                                <a href="mailto:joansants07@gmail.com"><span class="link-id">@Html.Raw("@")</span>:<span>joansants07@gmail.com</span></a>
+                                <a href="mailto:majo.martins@gmail.com"><span class="link-id">@Html.Raw("@")</span>:<span>majo.martins@gmail.com</span></a>
+                                <a href="mailto:info@gandalfgeek.com"><span class="link-id">@Html.Raw("@")</span>:<span>finado@gandalfgeek.com</span></a>
+                                <a href="mailto:saullo.sam115@gmail.com"><span class="link-id">@Html.Raw("@")</span>:<span>saullo.sam115@gmail.com</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer-col-item" id="footer-col-item">
+                            <h4>Newsletter</h4>
+                            <form class="signUpNewsletter" action="" method="get">
+                                <input name="" class="gt-email form-control" placeholder="seuEmail@gandalf.com.br" type="email" required>
+                                <input name="" class="btn-go" value="Ir" type="button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-layout">
+        <div class="copyright-tag">Copyright © 2017 Grupo "Hello World".</div>
+    </div>
+</footer>
+<script>
+    window.onload = function(){
+        jQuery(".cart-actions").empty();
+        jQuery(".cart-actions").html("<span style='font-size:20px;' class='glyphicon glyphicon-remove'></span>");
+    }
+
+    jQuery(".btn-go").one("click",function () {
+        jQuery("#footer-col-item").append("<p style='color:#4df9d9;margin-top:20px;margin-left:10px;'>Você está inscrito!</p>");
+    })
+</script>

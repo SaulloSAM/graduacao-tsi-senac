@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KaninoModelStoreContainer" CdmEntityContainer="Entidades">
+    <EntitySetMapping Name="Aplicacao">
+      <EntityTypeMapping TypeName="KaninoModel.Aplicacao">
+        <MappingFragment StoreEntitySet="Aplicacao">
+          <ScalarProperty Name="idAplicacao" ColumnName="idAplicacao" />
+          <ScalarProperty Name="DescAplicacao" ColumnName="DescAplicacao" />
+          <ScalarProperty Name="TipoAplicacao" ColumnName="TipoAplicacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="KaninoModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="nomeCategoria" ColumnName="nomeCategoria" />
+          <ScalarProperty Name="descCategoria" ColumnName="descCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="KaninoModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nomeCompletoCliente" ColumnName="nomeCompletoCliente" />
+          <ScalarProperty Name="emailCliente" ColumnName="emailCliente" />
+          <ScalarProperty Name="senhaCliente" ColumnName="senhaCliente" />
+          <ScalarProperty Name="CPFCliente" ColumnName="CPFCliente" />
+          <ScalarProperty Name="celularCliente" ColumnName="celularCliente" />
+          <ScalarProperty Name="telComercialCliente" ColumnName="telComercialCliente" />
+          <ScalarProperty Name="telResidencialCliente" ColumnName="telResidencialCliente" />
+          <ScalarProperty Name="dtNascCliente" ColumnName="dtNascCliente" />
+          <ScalarProperty Name="recebeNewsLetter" ColumnName="recebeNewsLetter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="KaninoModel.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nomeEndereco" ColumnName="nomeEndereco" />
+          <ScalarProperty Name="logradouroEndereco" ColumnName="logradouroEndereco" />
+          <ScalarProperty Name="numeroEndereco" ColumnName="numeroEndereco" />
+          <ScalarProperty Name="CEPEndereco" ColumnName="CEPEndereco" />
+          <ScalarProperty Name="complementoEndereco" ColumnName="complementoEndereco" />
+          <ScalarProperty Name="cidadeEndereco" ColumnName="cidadeEndereco" />
+          <ScalarProperty Name="paisEndereco" ColumnName="paisEndereco" />
+          <ScalarProperty Name="UFEndereco" ColumnName="UFEndereco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estoque">
+      <EntityTypeMapping TypeName="KaninoModel.estoque">
+        <MappingFragment StoreEntitySet="estoque">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="qtdProdutoDisponivel" ColumnName="qtdProdutoDisponivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemPedido">
+      <EntityTypeMapping TypeName="KaninoModel.ItemPedido">
+        <MappingFragment StoreEntitySet="ItemPedido">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="qtdProduto" ColumnName="qtdProduto" />
+          <ScalarProperty Name="precoVendaItem" ColumnName="precoVendaItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="KaninoModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+          <ScalarProperty Name="dataPedido" ColumnName="dataPedido" />
+          <ScalarProperty Name="idTipoPagto" ColumnName="idTipoPagto" />
+          <ScalarProperty Name="idEndereco" ColumnName="idEndereco" />
+          <ScalarProperty Name="idAplicacao" ColumnName="idAplicacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="KaninoModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="nomeProduto" ColumnName="nomeProduto" />
+          <ScalarProperty Name="descProduto" ColumnName="descProduto" />
+          <ScalarProperty Name="precProduto" ColumnName="precProduto" />
+          <ScalarProperty Name="descontoPromocao" ColumnName="descontoPromocao" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="ativoProduto" ColumnName="ativoProduto" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="qtdMinEstoque" ColumnName="qtdMinEstoque" />
+          <ScalarProperty Name="imagem" ColumnName="imagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusPedido">
+      <EntityTypeMapping TypeName="KaninoModel.StatusPedido">
+        <MappingFragment StoreEntitySet="StatusPedido">
+          <ScalarProperty Name="idStatus" ColumnName="idStatus" />
+          <ScalarProperty Name="descStatus" ColumnName="descStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagamento">
+      <EntityTypeMapping TypeName="KaninoModel.TipoPagamento">
+        <MappingFragment StoreEntitySet="TipoPagamento">
+          <ScalarProperty Name="idTipoPagto" ColumnName="idTipoPagto" />
+          <ScalarProperty Name="descTipoPagto" ColumnName="descTipoPagto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="KaninoModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="loginUsuario" ColumnName="loginUsuario" />
+          <ScalarProperty Name="senhaUsuario" ColumnName="senhaUsuario" />
+          <ScalarProperty Name="nomeUsuario" ColumnName="nomeUsuario" />
+          <ScalarProperty Name="tipoPerfil" ColumnName="tipoPerfil" />
+          <ScalarProperty Name="usuarioAtivo" ColumnName="usuarioAtivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="KaninoModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="KaninoModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="KaninoModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="KaninoModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KaninoModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="KaninoModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KaninoModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="KaninoModel.Store.sp_renamediagram" />
+  </EntityContainerMapping>
+</Mapping>

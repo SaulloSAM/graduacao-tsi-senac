@@ -1,0 +1,53 @@
+﻿<section id="cart">
+
+    <!-- Coluna Listagem carrinho de compras -->
+    <div class="cart-header">
+        <div class="wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="cart-product-photo-title"> Foto  </td>
+                        <td class="cart-product-name-title">  Nome  </td>
+                        <td class="cart-product-price-title"> Preço </td>
+                        <td class="cart-product-qtd-title">   Qtd.  </td>
+                        <td class="cart-product-total-title"> Total </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Produtos Lista -->
+    <div class="cart-body">
+        <div class="wrap">
+            <table>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bnt pagar, continuar comprando -->
+    <div class="cart-buttons">
+        <div class="wrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul class="navigation navigation-buttons">
+                                <li><a href="@Url.Action("Index", "Home")" class="btn btn-type-2"><span class="linkcart">Continuar Comprando</span></a></li>
+                                 <li><a href='@Url.Action("EfetuarPagamento", "Checkout")' id="btn-checkout" class="btn btn-type-2"><span class="linkcart">Checkout</span></a></li>
+                            </ul>
+                        </td>
+                        <td class="cart-total-products">
+                            Total: <span class="cart-total-price-products">R$ <span class="price">0</span></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

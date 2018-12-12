@@ -1,0 +1,43 @@
+﻿@model WebAppEcommerce.Models.ContaViewModel
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Conta", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-2"></div><h4>Use sua conta registrada para realizar login.</h4><br/><br />
+                    @Html.LabelFor(m => m.emailCliente, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.emailCliente, new { @class = "form-control", placeholder = "E-mail" })
+                        @Html.ValidationMessageFor(m => m.emailCliente, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2 control-label"><b>Senha</b></div>
+                    <div class="col-md-10">
+                    @Html.PasswordFor(m => m.senhaCliente, new { @class = "form-control", placeholder = "Senha" })
+                    @Html.ValidationMessageFor(m => m.senhaCliente)
+                    @Html.ValidationMessage("UserOrPasswordInvalid")
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-offset-2 col-md-2">
+                        <input type="submit" value="Acessar" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </section>
+        <div>
+            <p class="alert-danger">@ViewBag.Mensagem</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

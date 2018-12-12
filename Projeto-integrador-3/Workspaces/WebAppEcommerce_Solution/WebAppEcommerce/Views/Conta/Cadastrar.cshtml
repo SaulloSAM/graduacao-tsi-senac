@@ -1,0 +1,88 @@
+﻿@model WebAppEcommerce.Models.ClienteViewModel
+
+    
+    <!-- Campos Obrigatórios [ idCliente, nomeCompletoCliente, emailCliente, senhaCliente, CPF] -->
+
+    @using (Html.BeginForm())
+    {
+        <div class="container inicio">
+                @{ViewBag.Title = "Cadastro";}
+                <h1 style="text-align:center">@ViewBag.Title</h1>
+            <div class="form-horizontal col-md-2"></div>
+                <div class="form-horizontal col-md-7">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <!--Mostra o campo Nome -->
+                        @Html.LabelFor(model => model.nomeCompletoCliente, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                        <div class="col-md-10">
+                            <!-- Ativa o campo para digitar o nome -->
+                            @Html.EditorFor(model => model.nomeCompletoCliente, new { htmlAttributes = new { @class = "form-control tooltip", title = "Nome Completo" } })
+                            <!-- Validação via jQuery -->
+                            @Html.ValidationMessageFor(model => model.nomeCompletoCliente, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--Mostra o campo Data de Nascimento -->
+                        @Html.LabelFor(model => model.dataNascimento, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.dataNascimento, new { htmlAttributes = new { @class = "form-control tooltip", title = "Data de Nascimento", id = "dataNascimento" } })
+                            @Html.ValidationMessageFor(model => model.dataNascimento, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--Mostra o campo Email -->
+                        @Html.LabelFor(model => model.emailCliente, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.emailCliente, new { htmlAttributes = new { @class = "form-control tooltip", title = "Digite E-mail" } })
+                            @Html.ValidationMessageFor(model => model.emailCliente, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--Mostra o campo Senha -->
+                        @Html.LabelFor(model => model.senhaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.senhaCliente, new { htmlAttributes = new { @class = "form-control tooltip", title = "Senha Precisa ter uma letra maiúscula e minuscula com numeros" } })
+                            @Html.ValidationMessageFor(model => model.senhaCliente, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--Mostra o campo Confirmar Senha -->
+                        @Html.LabelFor(model => model.senhaConfirmaCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.senhaConfirmaCliente, new { htmlAttributes = new { @class = "form-control tooltip", title = "Confirmar Senha" } })
+                            @Html.ValidationMessageFor(model => model.senhaConfirmaCliente, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--Mostra o campo CPF -->
+                        @Html.LabelFor(model => model.CPFCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CPFCliente, new { htmlAttributes = new { @class = "form-control tooltip", maxlength = "11", title = "Digite 11 números" } })
+                            @Html.ValidationMessageFor(model => model.CPFCliente, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-2"></div>
+                        <div class="form-horizontal col-md-12 text-center">
+                            <input type="submit" value="Cadastrar" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                    <p class="alert-danger">@ViewBag.Mensagem</p>
+                </div><!--Fim Form-HOrizontal-->
+            </div><!--Fim Contianer-->
+     }
+
+@section Scripts {@Scripts.Render("~/bundles/jqueryval")}
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+    $("#dataNascimento").datepicker();
+    $(".tooltip").tooltip();
+</script>

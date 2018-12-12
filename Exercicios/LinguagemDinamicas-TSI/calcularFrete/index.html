@@ -1,0 +1,41 @@
+<!-- innerHTML -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calcular frete</title>
+    <script type="text/javascript" src="calcularFrete.js"></script>
+  </head>
+
+  <body>
+    <h1>Calcular Frete</h1>
+
+    <form action="" method="post" name="frmFrete" id="frmFrete">
+      <hr>
+      <p>Distancia:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="valorDistancia"></label>
+        <input type="text" name="valorDistancia" id="valorDistancia" />
+        KM.
+      </p>
+
+      <select id="estados">
+        <option value="1">Minas Gerais</option>
+        <option value="2">Rio de Janeiro </option>
+        <option value="3">Paraná </option>
+        <option value="4">São Paulo</option>
+      </select>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" name="button" id="button" value="CalcularFrete" onclick="frete()" />
+
+      <p>O seu Frete é de:
+        <label for="txtResultado"></label>
+        <input type="text" name="txtResultado" id="txtResultado" />
+        Reais.
+      </p>
+
+    </body>
+    <hr>
+  </form>
+
+<html>

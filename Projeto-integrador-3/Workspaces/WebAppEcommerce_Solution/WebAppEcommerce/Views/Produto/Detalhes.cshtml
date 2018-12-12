@@ -1,0 +1,87 @@
+﻿@model WebAppEcommerce.Models.Produto
+
+@{
+    ViewBag.Title = "Detalhes";
+
+}
+
+<div class="container">
+    <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 BoxDetalhe">
+                <div>
+                    <div class="col-md-12 panelTop" id="panelTopDet">
+                        <div class="col-md-4">
+                            @{
+                                string imgProd = string.Empty, nameProduct = string.Empty;
+                                string price = Convert.ToDecimal(Model.precProduto - Model.descontoPromocao).ToString("#,##.00");
+                                string nomeProd = string.Empty;
+                                string descricao = Model.descProduto != null ? Model.descProduto : "Descrição indisponível";
+
+                                if (Model.imagem != null)
+                                {
+                                    string strImg = Convert.ToBase64String(Model.imagem);
+                                    imgProd = "data:image/png;base64," + strImg;
+                                    nameProduct = @Model.nomeProduto;
+                                }
+                                else
+                                {
+                                    imgProd = "~/img/default_product.png";
+                                    nameProduct = "Não foi possível encontrar a imagem do produto.";
+                                }
+
+                                nomeProd = Model.nomeProduto;
+                                <img draggable="true" class="img-responsive" id="imgDet" src=@imgProd
+                                     id="product-image-@Model.idProduto"
+                                     class="text img-responsive" alt="@nomeProd"
+                                     title="@nomeProd" />
+                            }
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-6">
+                            <div id="detNome">
+                                <h1>@Html.ActionLink(Model.nomeProduto, "Detalhes", "Produto", new { id = Model.idProduto }, new { @class = "aBoxDetalhe", title = Model.nomeProduto })</h1>
+                            </div>
+                            <div id="detDesc">
+                                <p>
+                                    @{
+                                        string strDescProduto = Model.descProduto;
+                                        if (Model.descProduto.Length > 400)
+                                        {
+                                            strDescProduto = Model.descProduto.Substring(0, 400) + "...";
+                                        }
+                                    }
+                                    @Html.ActionLink(strDescProduto, "Detalhes", "Produto", new { id = Model.idProduto }, new { @class = "aBoxDetalhe", title = Model.descProduto })
+                                </p>
+                            </div>
+                            <div id="detPrec">
+                                <span class="itemPrice">
+                                    @{
+                                        decimal decPreco = Model.precProduto - (decimal)Model.descontoPromocao;
+                                        if (Model.descontoPromocao > 0)
+                                        {
+                                            <p class="text-">De: @string.Format("{0:c}", Model.precProduto) | Por: <b> @string.Format("{0:c}", decPreco)</b></p>
+                                        }
+                                        else
+                                        {
+                                            <p>@string.Format("{0:c}", decPreco)</p>
+                                        }
+                                    }
+                                </span>
+                            </div>
+
+                            <div id="detBuy">
+                                <a accesskey="" href="javascript:;" class="btn btn-type-1 add-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@price">ADICIONAR AO CARRINHO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<hr>
+<div class="row sessionHome">
+    <h1 class="row titleHome">Recomendamos também</h1>
+    @Html.Action("Promocao", "Produto")
+</div>

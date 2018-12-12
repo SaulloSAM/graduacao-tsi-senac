@@ -1,0 +1,20 @@
+2 - 
+
+    a - O que é Session ID Name Fingerprinting?
+
+        O nome usado pelo ID da sessão não deve ser extremamente descritivo nem oferecer detalhes desnecessários sobre a finalidade e o significado do ID.
+
+        Os nomes de ID de sessão usados pelas estruturas de desenvolvimento de aplicativos da Web mais comuns podem ser facilmente impressos [0], como PHPSESSID (PHP), JSESSIONID (J2EE), CFID e CFTOKEN (ColdFusion), ASP.NET_SessionId (ASP .NET), etc Portanto, o nome do ID da sessão 
+        
+        pode divulgar as tecnologias e linguagens de programação usadas pelo aplicativo da web.
+        Recomenda-se alterar o nome da ID da sessão padrão da estrutura de desenvolvimento da Web para um nome genérico, como "id".
+
+    b - Verifique no seu programa qual o nome do cookie de sessão do PHP.
+
+        PHPSESSID
+
+    c - Qual o tamanho do SID? Qual era o tamanho recomendado?
+
+        Atual: 35
+        Maximo: 16Byte
+

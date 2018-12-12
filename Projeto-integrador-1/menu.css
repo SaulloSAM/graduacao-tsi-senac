@@ -1,0 +1,83 @@
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Estilo do Menu */
+header {
+  background-color: #2e3192;
+  width: 100%;
+  height: 50px;
+
+  float: left;
+  z-index: 99;
+  position: fixed;
+  opacity: 0.9;
+}
+
+nav {
+  margin: 0 auto;
+  width: 1080px;
+  height: 50px;
+}
+
+nav img {
+  float: left;
+}
+
+nav ul {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  float: right;
+}
+
+/* Apenas as listas */
+nav li {
+  color: #fff;
+  float: left;
+  width: auto;
+  height: 19px;
+  padding:15px 35px;
+  text-align: center;
+  font-size: 15px;
+
+  list-style-type: none; /* Sem estilo de linha. */
+  display: inline; /* Exibir um ao lado do outro. */
+}
+
+/* Todos os links que estÃƒÂ£o na lista*/
+nav a{
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul li:hover{
+  background: #ffc40d;
+  transition: all 0.3s;
+  color: #000000 2px;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Estilo do Menu */
+footer {
+  background-color: #2e3192;
+  width: 100%;
+  height: 100px;
+
+  float: left;
+  opacity: 0.9;
+}
+
+footer div {
+  margin: 0 auto;
+  width: 770px;
+  height: 50px;
+  text-align: center;
+  
+}
+
+footer p {
+  color: #fff;
+}

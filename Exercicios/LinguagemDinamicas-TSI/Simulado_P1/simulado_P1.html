@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <hr><h3>Exercício 01</h3><hr>
+      <!--
+        1. Desenvolva o código-fonte em javascript que tenha um campo "Peso" e "Altura"
+        onde necessariamente deve ser validado para não ser um campo vazio e obrigatóriamente
+        inteiro.
+      -->
+      <form action="" method="post" name="frmPesoAltura" id="frmPesoAltura" />
+        <p>Peso: &nbsp;&nbsp;
+          <label for="frmPesoAltura"></label>
+          <input type="text" name="txtPeso" id="txtPeso" />
+        </p>
+
+        <p>Altura: &nbsp;
+          <label for="frmPesoAltura"></label>
+          <input type="text" name="txtAltura" id="txtAltura" />
+        </p>
+
+        <input type="button" name="button" id="button" value="Verificar" onClick="exUM()" />
+      </form>
+    <!-- ....................................................................... -->
+
+    <br><br><br><br>
+    <hr><h3>Exercício 02</h3><hr>
+      <!--
+        2.Desenvolva o código-fonte em javascript de página onde apareça três imagens
+        e ao passar o mouse sobre elas irá aparecer aparecer um alert com o nome da imagem.
+      -->
+      <img src="img1.jpg" id="img01" onmouseover="exDois('img01')" />
+      <img src="img1.jpg" id="img02" onmouseover="exDois('img02')" />
+      <img src="img1.jpg" id="img03" onmouseover="exDois('img03')" />
+    <!-- ....................................................................... -->
+
+    <br><br><br><br>
+    <hr><h3>Exercício 03</h3><hr>
+      <!--
+        3. Desenvolva o código fonte em javascript de uma página onde aparece uma tag select
+        em um formulário e o usuário escolhe um estado. Ao clicar no botão OK deverá aparecer
+        um alert com o nome da capital do estado escolhido. (Pode ser desenvolvido somente o javascript).
+      -->
+        <form method="post" name="frmFrete" id="frmFrete">
+          <p>Escolha um estado</p>
+
+          <select id="estado">
+            <option value="1">Estado 01</option>
+            <option value="2">Estado 02</option>
+            <option value="3">Estado 03</option>
+            <option value="4">Estado 04</option>
+          </select>
+
+          <input type="button" name="button" id="button" value="Verificar_Frete" onclick="exTres()" />
+    <!-- ....................................................................... -->
+
+    <br><br><br><br>
+    <hr><h3>Exercício 04</h3><hr>
+      <!--
+        4. Desenvolva o códico-fonte de uma página onde o usuário ao clicar sobre um
+        campo de texto ele muda para a cor verde.
+      -->
+        <form id="formulario" name="formulario">
+          <p>Digite:
+            <input name="texto" type="text" id="texto" size="60" maxlength="50" onfocus="exQuatro(this,'green')" />
+          </p>
+        </form>
+    <!-- ....................................................................... -->
+
+    <br><br><br><br><br><br>
+    <hr><h3>Exercício 05</h3><hr>
+      <!--
+        5. Para calcular uma prestação em atraso utilizando a fórmula:
+        PrestacaoAtraso = (prestacao + (prestacao * diasatraso * 0.02));
+        Onde: PrestacaoAtraso é o valor que será calculado, prestacao é o valor atual da parcela,
+        diasatraso a quantidade de dias em atraso e 0.02 a porcentgem de (2%) por dia de atraso.
+
+        Desenvolva em javascript o código para a implementação do cálculo utilizando prompt para receber
+        os valores e alert para apresentar o resultado.
+      -->
+      <p>Calcular Prestação</p>
+
+      <script>
+        var p = eval(prompt("Digite o Valor da Prestação: "));
+        var d = eval(prompt("Digite a quantidade de Dias em atraso: "));
+
+        alert("Sua Pretação atual: "+ (p+(p*d*0.02)) +" Reais.");
+        </script>
+      <!-- ....................................................................... -->
+  </body>
+</html>
+
+<script>
+// -----------------------------------------------------------------------------
+function exUM(){
+  var peso = document.frmPesoAltura.txtPeso.value;
+  var altura = document.frmPesoAltura.txtAltura.value;
+
+  if( (peso == "") || (isNaN(peso)) ){
+    alert("O campo PESO é obrigatório e deve ser preenchido com um número inteiro !!!");
+    document.frmPesoAltura.txtPeso.focus();
+    return;
+  }else if ( (altura == "") || (isNaN(altura)) ){
+    alert("O campo ALTURA é obrigatório e deve ser preenchido com um número inteiro !!!");
+    document.frmPesoAltura.txtAltura.focus();
+    return;
+  }
+  alert("OK !!!");
+}
+// -----------------------------------------------------------------------------
+function exDois(nomeImagem){
+  alert("O nome da Imagem é: "+nomeImagem);
+}
+// -----------------------------------------------------------------------------
+function exTres(){
+  var codEstado = document.getElementById('estado').value;
+
+  switch (codEstado) {
+    case "1":
+      alert("Capital 01 - Estado 01");
+      break;
+    case "2":
+      alert("Capital 02 - Estado 02");
+      break;
+    case "3":
+      alert("Capital 03 - Estado 03");
+      break;
+    case "4":
+      alert("Capital 04 - Estado 04");
+      break;
+    default:
+      alert("Por favor selecionar um campo válido !!!");
+      break;
+  }
+}
+// -----------------------------------------------------------------------------
+function exQuatro(ref, color){
+  ref.style.backgroundColor=color;
+}
+</script>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_login"
+            android:checked="false"
+            android:icon="@drawable/user"
+            android:title="Entrar"
+            />
+
+        <item
+            android:id="@+id/action_newUser"
+            android:checked="false"
+            android:icon="@drawable/newuser"
+            android:title="Cadastrar Usuário"
+            />
+
+        <item
+            android:id="@+id/action_finalizar"
+            android:checked="false"
+            android:icon="@drawable/finalizarcompra"
+            android:title="Finalizar Compra"
+            />
+
+        <item
+            android:id="@+id/action_sobre"
+            android:checked="false"
+            android:icon="@drawable/quemsomos"
+            android:title="Sobre Nós"
+            />
+
+        <item
+            android:id="@+id/action_sair"
+            android:checked="false"
+            android:icon="@drawable/sair"
+            android:title="Sair"
+            />
+    </group>
+
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/cart"
+        android:title="Carrinho"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_qrCode"
+        android:title="QR Code"
+        android:icon="@drawable/qrcode"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_endereco"
+        android:checked="false"
+        android:icon="@drawable/endereco"
+        android:title="Novo Endereço"
+        app:showAsAction="collapseActionView"
+        />
+</menu>

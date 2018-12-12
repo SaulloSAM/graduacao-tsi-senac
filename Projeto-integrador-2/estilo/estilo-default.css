@@ -1,0 +1,38 @@
+/* Importar a Font direto da API do Google. --------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+/* Declaração de váriavel --------------------------------------------------- */
+/* Laranja Default #f76f00 */
+/* Verde Default   #008a8a */
+/* Fundo Default   #ffffff */
+
+/* Definindo padrã da página ------------------------------------------------ */
+*{
+  border: 0; margin: 0; padding: 0;
+  font-weight: 300; /* peso da fonte */
+}
+
+body{ /* Declarando parão "default" para navegadores */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white; font-weight: 300; background-color: #fff;
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white; font-weight: 300;
+  }
+
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white; font-weight: 300; opacity: 1;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white; font-weight: 300; opacity: 1;
+  }
+
+  :-ms-imput-placeholder { /* Internet Explorer 10+ */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white; font-weight: 300;
+  }
+}

@@ -1,0 +1,215 @@
+:root {
+    --main-color: #009D5E; 
+    --dark-color: #333;
+}
+body {background: url(images/grafismos4_.png) fixed; background-size: cover; font-family: 'Montserrat', Helvetica;}
+ul {list-style: none; margin: 0; padding: 0;}
+img {max-width: 100%;}
+a:hover {text-decoration: none;}
+.bars {background: url(images/title-bars.png) no-repeat; padding-top: 60px;}
+.barsAlignRight {background-position: right top;}
+.verticalAlign {display: flex; align-items: center;}
+.detailsBtn {border-radius: 5px; color: #fff; display: block; font-size: 30px; margin-top: 40px; padding: 20px 0; text-align: center; transition: background-color .5s, border .5s;}
+.detailsBtn:hover {background-color: #fff; border: solid 2px var(--main-color); color: var(--main-color);}
+
+header, .product, .carousel-indicators .active, .detailsBtn, #info {background: var(--main-color) url(images/grafismos4_.png) no-repeat top; background-size: 100%;}
+header #topBarMenu, footer, .carousel-indicators .active, #description {background-color: var(--dark-color);}
+.wrapper {padding: 300px 0;}
+
+header a, footer a {font-size: 16px;}
+.row {width: 100%; margin: 0;}
+header {border-bottom: solid 1px #fff; box-shadow: 0 2px 20px #fff; color: #fff; position: fixed; width: 100%; z-index: 1000;}
+header a {color: #fff;}
+header .row {padding: 15px 0;}
+header ul li {display: inline-block; margin-right: 15px;}
+header #topBarMenu {border-bottom: solid 1px #fff; padding: 5px 0;}
+header #topBarMenu a {font-size: 12px;}
+header #topBarMenu a:hover {color: var(--main-color);}
+header #userMenu {display: none; position: absolute;background-color: var(--dark-color); width: auto; padding: 10px; z-index: 1000; right: 25px; top: 15px;}
+header #userMenu li {display: block; margin-right: 0;}
+header #user:hover #userMenu {display: block;}
+header #keyQtd {margin-left: 5px;}
+header input[type=search] {border: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #333; margin-right: -5px; padding: 12px 20px; width: 90%;}
+form button {background: #fff; border: none; border-top-right-radius: 5px; border-bottom-right-radius: 5px; padding: 15px;}
+form button i {color: var(--main-color);}
+header #category li {margin-right: 5%;}
+header #category li:last-child {margin-right: 0;}
+#category > li a {color: #fff; font-size: 16px; padding: 5px;}
+#category > li::after, #category > li::before {
+    content: '';
+    display: block;															
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+#category > li:hover::after, #category > li:hover::before {
+    width: 100%;
+    //transition: width .3s;
+}
+
+#destaque {background: var(--dark-color) url(images/darkBg.png) no-repeat; background-position: 0 -150%; color: #fff; padding-top: 220px;}
+.carousel-indicators {bottom: -50px;}
+.carousel-indicators li {background-color: #ddd; border-radius: 0; width: 120px;}
+.carousel-indicators .active {width: 120px;}
+.carousel-inner .item {min-height: 540px;}
+.carousel-inner .item p:first-child {font-size: 16px;}
+.carousel-inner .item h2 {font-size: 50px; margin-top: 0; margin-bottom: 40px;}
+.carousel-inner .item p {font-size: 20px; margin: 0;}
+.carousel-inner .item .price {font-size: 30px;}
+.showroom {padding-top: 200px;}
+.showroom h2 {font-size: 40px; margin-bottom: 40px; padding-left: 110px;}
+.showroom h2 span {font-size: 22px;}
+.showroom a {color: var(--dark-color); display: block;}
+.showroom .text-right {padding-left: 0; padding-right: 110px;}
+.showroom .container > div {margin-bottom: 20px;}
+.product {color: #fff; height: 150px; margin-bottom: 20px; transition: background-color 1s;}
+.product:hover {background: #fff; color:var(--dark-color);}
+.product .img-container, .product .img-container img {height: 100%;}
+.product .img-container img {width: 100%;}
+.product .img-container {background-color: #fff;}
+.container .product div {padding: 0;}
+.container .product .prodDescription {padding-left: 20px;}
+.container .product .prodDescription p {font-size: 18px; margin: 0;}
+.container .product .prodDescription p:first-child {font-size: 12px;}
+.darkBg {background: url(images/darkBg.png) no-repeat; padding-bottom: 100px;}
+.darkBg h2 {color: #fff;}
+.darkBg a {color: #fff;}
+
+.wrapper .bars {margin-bottom: 100px;}
+.wrapper .bars span {font-size: 22px;}
+.wrapper form {font-size: 16px; width: 75%;}
+.wrapper form a {color: #fff;}
+.wrapper form a:hover {color: var(--dark-color);}
+.wrapper form input, .wrapper form textarea, .wrapper form select {background: none; border: none; border-bottom: solid 3px var(--dark-color); box-shadow: none; margin-bottom: 40px; padding: 10px 20px; width: 100%;}
+.wrapper form input[type=submit] {border: solid 2px var(--dark-color); background: var(--dark-color); border-radius: 10px; color: #fff; margin-left: 50px; width: 200px; transition: background .5s;}
+.wrapper form input[type=submit]:hover {background: #037145}
+#description {color: #fff; margin-left: -180px; padding: 130px 30px;}
+#description h3 {margin-bottom: 80px;}
+#info {color: #fff; margin-top: 100px; padding: 80px 15px 200px 15px;}
+#info h2 {font-size: 40px; margin-top: 0; margin-bottom: 60px;}
+#info p {font-size: 26px; margin: 0;}
+#info #price {font-size: 36px;}
+#info #contact {background: url(images/btnContactBg.png) no-repeat left var(--dark-color); border: solid 2px var(--dark-color); border-radius: 10px; color: #fff; display: inline-block; font-size: 36px; margin-top: 100px; padding: 15px 30px 15px 160px; transition: background .5s;}
+#info img {max-width: 75%;}
+#info #contact:hover {background: url(images/btnContactBg.png) no-repeat left #037145;}
+#info #btnLogin {background-color: var(--dark-color); border-radius: 10px; color: #fff; display: inline-block; margin-top: 50px; padding: 10px;}
+#info #btnLogin:hover {background-color: #fff; color: var(--dark-color); text-decoration: none;}
+
+#account h2 {font-size: 30px; margin-top: 0;}
+#account #info {padding: 50px 15px;}
+#account #description i {font-size: 40px; margin-bottom: 20px;}
+#account #description p {margin-bottom: 20px;}
+#account #address #description p {margin: 0;}
+#account #address #description div {margin-bottom: 40px;}
+#address #description h3 {margin-bottom: 20px;}
+
+#account ::placeholder { 
+    color: #fff;
+    opacity: 1; 
+}
+
+#account :-ms-input-placeholder { 
+    color: #fff;
+}
+
+#account ::-ms-input-placeholder { 
+    color: #fff;
+}
+
+#wishlist i {color: #fff; font-size: 30px; margin: 10px 0;}
+#wishlist .editBtns {position: absolute; bottom: 0; width: 100%; transition: background .5s;}
+#wishlist .editBtns:hover {background: #037145;}
+#wishlist .editBtns .edit {background: var(--main-color);}
+#wishlist .editBtns .delete {background: var(--dark-color);}
+#wishlist .wish {background: rgba(0,157,94,.5); height: 500px; margin-bottom: 30px; position: relative;}
+#wishlist h3 {padding: 0 15px;}
+#wishlist .wish img {max-height: 350px;}
+#msgSuccess {background: var(--main-color); color: #fff; font-size: 26px; padding: 20px 0; text-align: center;}
+.error {background: var(--dark-color)!important;}
+.newProdBtn {background-color: var(--main-color); color: #fff; font-size: 18px; font-weight: bold; padding: 20px 40px;}
+.newProdBtn:hover {background-color: var(--dark-color); color: #fff;}
+
+footer .container {padding: 50px 15px;}
+footer #copyright {border-top: solid 4px var(--main-color); padding: 15px 0;}
+footer #copyright p {color: #fff; font-size: 10px;}
+footer p {margin: 0;}
+footer a {color: var(--main-color);}
+footer a:hover {color: #fff;}
+#social {margin-top: 20px;}
+#social li {display: inline-block; margin-right: 20px;}
+#social li:last-child {margin-right: 0;}
+#social li a {font-size: 18px;}
+textarea {height: 150px; resize: none;}
+#productEdit form {width: 100%;}
+#productEdit form #valor, #productEdit form #categoria {width: 50%;}
+#productEdit form #categoria {height: 50px;}
+#productEdit {background-color: rgba(0,0,0,.1);}
+#productEdit .btn-primary {background-color: var(--main-color); border: none; font-size: 18px;}
+#productEdit .btn-primary:hover {background-color: #036e43}
+
+#key #info i {margin-right: 10px;}
+#key #info p {margin-bottom: 50px; width: 75%;}
+#key #info p a {color: #fff; background-color: var(--dark-color); border-radius: 10px; font-size: 20px; float: right; padding: 10px;}
+#key #info p a:hover {background-color: var(--main-color); border: solid 1px #fff;}
+
+.clearFix:before, .clearFix:after {content: ""; display: table; clear: both;}
+
+@media only screen and (max-width: 1200px) {
+    #description {margin-left: -80px;}
+}
+
+@media only screen and (max-width: 990px) {
+    header {position: inherit;}
+    #destaque {padding-top: 0; padding-bottom: 200px;}
+    .carousel {padding-top: 20px;}
+    .carousel-indicators {bottom: -100px;}
+    .carousel-indicators li {width: 40px;}
+    .carousel-indicators .active {width: 40px;}
+    .carousel-inner .item h2 {font-size: 30px;}
+    .carousel-inner .item p {font-size: 18px;}
+    .carousel-inner .item .price {font-size: 20px;}
+    #destaque {background: var(--dark-color);}
+    .detailsBtn {font-size: 22px;}
+    .showroom {padding-top: 100px;}
+    #description {margin-left: 0;}
+    #info img {max-width: 100%;}
+    #info #contact {width: 100%;}
+    #info {margin-top: 0;}
+    .wrapper form,#key #info p {width: 100%;}
+    .wrapper {padding: 100px 0;}
+}
+
+@media only screen and (max-width: 767px) {
+    .container, #wishlist .container {padding: 0;}
+    .wrapper .container {padding: 0 15px;}
+    .product {height: auto; padding-bottom: 20px;}
+    .darkBg {background: #037145 url(images/darkBg.png) no-repeat;}
+    footer .text-right {margin-top: 50px; text-align: center;}
+    .darkBg {padding-top: 100px; margin-top: 100px;}
+    .showroom h2 {padding-left: 15px;}
+    .showroom .text-right {padding-right: 15px;}
+    header .verticalAlign {display: block;}
+    #topBarMenu .container {padding: 0 15px;}
+    #logo img {display: block; margin: auto; margin-bottom: 10px;}
+    #info {padding-bottom: 50px;}
+    #description {padding: 50px 15px;}
+    #info h2 {font-size: 26px; margin-top: 50px; margin-bottom: 20px;}
+    #info p {font-size: 16px;}
+    #info #price {font-size: 20px;}
+    #info #contact {margin-top: 40px;}
+    #wishlist h2 {padding-right: 15px;}
+    .product .img-container, .product .img-container img {height: auto;}
+    .carousel-inner .item p:first-child {margin-top: 20px;}
+    #info #btnLogin {display: block; text-align: center;}
+}
+
+@media only screen and (max-width: 580px) {
+    #info #contact {font-size: 24px;}
+}
+
+@media only screen and (max-width: 470px) {
+    #info #contact {background-size: 100px; font-size: 16px; padding-left: 100px; text-align: right;}
+    header input[type=search] {width: 85%;}
+}

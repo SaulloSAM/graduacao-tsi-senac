@@ -1,0 +1,66 @@
+﻿
+@{ 
+    Layout = "~/Views/Shared/_Layout _checkout.cshtml";
+}
+
+@model WebAppEcommerce.Models.Checkout
+
+<div class="row">
+    <div class="col-md-7">
+        <section id="loginForm">
+            <h2>@ViewBag.Title</h2>
+            @using (Html.BeginForm("Index", "Checkout", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @*@Html.AntiForgeryToken()*@
+                <h4>Use seu Cartão de Crédito.</h4>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nome, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NumeroCartao, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.NumeroCartao, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NumeroCartao, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Validade, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Validade, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Validade, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CodSeguranca, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.CodSeguranca, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.CodSeguranca, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Confirmar Pagamento" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </section>
+        <div>
+            <p class="alert-danger">@ViewBag.Mensagem</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

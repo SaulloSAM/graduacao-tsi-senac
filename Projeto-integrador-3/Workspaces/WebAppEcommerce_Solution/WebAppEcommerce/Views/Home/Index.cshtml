@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebAppEcommerce.Models.Produto>
+@{ViewBag.Title = "Home";}
+
+@Html.Partial("_Banner")
+
+<div class="row sessionHome">    
+    <h1 class="row titleHome">Destaques</h1> 
+    @Html.Action("Destaque", "Produto")
+    @Html.Action("Destaque", "Produto")
+</div>
+
+<div class="row sessionHome">
+    <h1 class="row titleHome">Lançamentos</h1>
+    @Html.Action("Novidades", "Produto")
+</div>
+
+<div class="row sessionHome">
+    <h1 class="row titleHome">Promoções</h1>
+    @Html.Action("Promocao", "Produto")
+</div>

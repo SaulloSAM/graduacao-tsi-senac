@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PI3-AULA-17082017", "PI3-AULA-17082017\PI3-AULA-17082017.csproj", "{D90B0B92-8012-47EA-B831-37F3BF0DAF88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D90B0B92-8012-47EA-B831-37F3BF0DAF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90B0B92-8012-47EA-B831-37F3BF0DAF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90B0B92-8012-47EA-B831-37F3BF0DAF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90B0B92-8012-47EA-B831-37F3BF0DAF88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

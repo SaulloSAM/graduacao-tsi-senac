@@ -1,0 +1,20 @@
+Entrega -(19/11) através do meu email fabio.tpereira@sp.senac.br
+
+(um por grupo de PI, não esquecer de colocar os integrantes no relatório)
+
+Relatório deve ser entregue em PDF (ou .doc) contendo, para cada item, a descrição da funcionalidade, o screenshot e o código contendo o uso do jquery exigido no item. Não precisa enviar o PI.
+
+Nota: máximo 4,0 que soma com sua pior nota da prova até completar 6 pontos (ex: tirou 3,0 como pior nota de prova e 4,0 na sub, a nota da sua pior prova vai ser limitada a 6,0)
+
+Requisitos:
+
+(valor 1,0) Exemplo do uso dos 5 conjunto de funcionalidades do jquery
+Seletor
+Manipulador
+Eventos
+Atravessamento
+Efeito
+(valor 1,0) Uso de 3 Widgets do JQueryUI (ex: datepiker, autocomplete, etc)
+(valor 1,0) Uso de 1 interação JQueryUI (ex: draggable) e uma animação (ex: fold, bounce, usando as novas funcionalidades de animação adicionadas pelo JQueryUI – ex: switchClass, etc)
+(valor 1,0) Uso do Ajax através do jquery (através do método $.ajax)
+(BONUS valor 1,0) Uso do Ajax consumindo um serviço que devolva os dados em JSON (adicionar no relatório um exemplo de retorno do serviço JSON

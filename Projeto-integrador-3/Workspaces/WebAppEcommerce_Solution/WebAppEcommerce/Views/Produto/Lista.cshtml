@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebAppEcommerce.Models.Produto>
+@{
+    ViewBag.Title = string.Format("{0}", ViewBag.Categoria);
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="container col-sm-12 row produtoEfeito" style="margin-top:60px">
+    @if(Model.Count() != 0) { 
+    foreach (var item in Model)
+    {
+        <div class="col-sm-3 row" id="boxprod">
+            <div class="col-item">
+                <div class="photo">
+                    @{
+                        string imgProd = string.Empty;
+                        string nomeProd = string.Empty;
+                        if (item.imagem != null)
+                        {
+                            string strImg = Convert.ToBase64String(item.imagem);
+                            imgProd = "data:image/png;base64," + strImg;
+                        }
+                        else
+                        {
+                            imgProd = "~/img/default_product.png";
+                        }
+                        nomeProd = item.nomeProduto;
+                    }
+                    <img id="imgProd" class="img-responsive" draggable="true" src=@imgProd
+                         id="product-image-@item.idProduto"
+                         class="img-responsive" alt="@nomeProd"
+                         title="@nomeProd" />
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <div class="price col-md-12">
+                            <h5 id="nomeProd">
+                                @Html.ActionLink(item.nomeProduto, "Detalhes", "Produto", new { id = item.idProduto }, new { title = item.nomeProduto })
+                            </h5>
+                            <h5 class="price-text-color">
+                                R$
+                                @Html.DisplayFor(modelItem => item.precProduto)
+                            </h5>
+                        </div>
+                        <div class="rating hidden-sm col-md-6">
+                        </div>
+                    </div>
+                    <div class="separator clear-left">
+                        <p class="btn-add">
+                            <i class="fa fa-shopping-cart"></i><a class="add-cart" data-product-id="@item.idProduto" data-product-name="@item.nomeProduto" data-product-price="@item.precProduto">Comprar</a>
+                        </p>
+                        <p class="btn-details">
+                            <a class="hidden-sm">@Html.ActionLink("Detalhes", "Detalhes", "Produto", new { id = item.idProduto }, new { title = item.nomeProduto })</a>
+                        </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            }
+        }
+        else
+        {
+            <p style="text-align:center; padding: 0 0 50px 0;"><img src="~/img/erro-sem-produto.jpg" /></p>
+        }
+
+    <script>
+        
+    </script>
+
+</div>

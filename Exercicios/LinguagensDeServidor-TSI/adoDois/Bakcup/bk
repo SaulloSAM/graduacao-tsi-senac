@@ -1,0 +1,30 @@
+<?php
+  // Iniciando uma Sessão na página.
+  session_start();
+
+  // Criando vareáveis.
+  $usuario='';
+
+  // Validando usuário!
+  // Se não existir nenhum usuário, verificar se existe informações no formulário.
+  if(!isset($_SESSION['usuario'])){
+    if (isset($_POST['usuario'])) $usuario = $_POST['usuario']; // Passando para o parametro digitado no fomrulário para a vareável usuario.
+    if (isset($_POST['senha'])) $senha = $_POST['senha']; // Passando para o parametro digitado no fomrulário para a vareável senha.
+
+    // Após inserir os dados de login e senha, verificamos se estão corretas as informações.
+    if($usuario=='oie' && $senha=='correto'){
+      // Se a senha estiver correta.
+      echo 'Login Válido'; // Mostrar via navegador a mgs.
+        $_SESSION['usuario']='oie'; // Passando o valor para vareável usuario.
+    } else echo 'Login Inválido'; // Se a senha estiver incorreta.
+  }
+?>
+
+<?php
+  // Se não existir nenhum usuário, iremos mostrar no navegador o formulário que está em formulário.php
+  if (!isset($_SESSION['usuario'])) include 'formulario.php';
+  // Se existir um usuário, iremos para a psge 2.
+  else {
+    echo '<br/> <a href="formulario.php">page 2</a>';
+  }
+?>

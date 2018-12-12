@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b6efb32797904ad4bea372d59e74230a" Name="Diagram1">
+        <EntityTypeShape EntityType="KaninoModel.Aplicacao" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Categoria" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Cliente" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Endereco" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.estoque" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.ItemPedido" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Pedido" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Produto" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.StatusPedido" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.TipoPagamento" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KaninoModel.Usuario" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <AssociationConnector Association="KaninoModel.FK_Pedido_Aplicacao" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Produto_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Endereco_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Pedido_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Pedido_Endereco" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Produto_estoque" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_ProdutoPedido_Pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_ProdutoPedido_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Pedido_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Pedido_TipoPagamento" ManuallyRouted="false" />
+        <AssociationConnector Association="KaninoModel.FK_Produto_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

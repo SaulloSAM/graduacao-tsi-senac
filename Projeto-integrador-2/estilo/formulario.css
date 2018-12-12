@@ -1,0 +1,20 @@
+.container-frm{
+  width: 70%; height: 300px; position: absolute;
+  left: -35%; margin: 0px 50%; top: 150px;
+  background-color: #f76f00; opacity: 0.9;
+}
+
+input{
+  width: 70%; height: 20px; position: absolute; left: -35%;
+  margin: 0% 50%; top: 30px;
+}
+
+textarea{
+position: absolute; top: 100px; width: 70%; height: 100px;
+left: -35%; margin: 0% 50%;
+}
+
+button{
+  position: absolute; top: 250px; width: 10%; height: 30px;
+  left: -5%; margin: 0% 50%; border-radius: 3px;
+}

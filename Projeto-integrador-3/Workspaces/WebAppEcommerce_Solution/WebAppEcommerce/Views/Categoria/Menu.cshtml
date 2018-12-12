@@ -1,0 +1,18 @@
+﻿@model IEnumerable<WebAppEcommerce.Models.Categoria>
+<nav class="menu">
+    <div class="wrap">
+        <ul class="navigation-menu">
+            @foreach (var item in Model)
+            {
+                if (item.idCategoria <= 5)
+                {
+                    <li>
+                        @Html.ActionLink(item.nomeCategoria, "Lista", "Produto",
+                        new { id = item.idCategoria }, null)
+                    </li>
+                }
+            }
+            <li>@Html.ActionLink("Outras...", "Lista", "Produto", new { id = -1 }, null)</li>
+        </ul>
+    </div>
+</nav>

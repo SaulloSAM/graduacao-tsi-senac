@@ -1,0 +1,71 @@
+﻿@model WebAppEcommerce.Models.Produto
+
+<div id="destaque">
+        <div class="col-md-6">
+            <div class="panel panel-default  panel--styled">
+                <div class="panel-body">
+                    <div class="col-md-12 panelTop" id="panelTop">
+                        <div class="col-md-4">
+                            @{
+                                string imgProd = string.Empty;
+                                string nomeProd = string.Empty;
+                                if (Model.imagem != null)
+                                {
+                                    string strImg = Convert.ToBase64String(Model.imagem);
+                                    imgProd = "data:image/png;base64," + strImg;
+                                }
+                                else
+                                {
+                                    imgProd = "~/img/default_product.png";
+                                }
+                                nomeProd = Model.nomeProduto;
+                                <img draggable="true" class="img-responsive" id="imgCapa"  src=@imgProd
+                                     id="product-image-@Model.idProduto"
+                                     class="text img-responsive" alt="@nomeProd"
+                                     title="@nomeProd" />
+                            }
+                        </div>
+                        <div class="col-md-8">
+                            <h2>@Html.ActionLink(Model.nomeProduto, "Detalhes", "Produto", new { id = Model.idProduto }, new { @class = "destaque", title = Model.nomeProduto })</h2>
+                            <p>
+                                @{
+                                    string strDescProduto = Model.descProduto;
+                                    if (Model.descProduto.Length > 400)
+                                    {
+                                        strDescProduto = Model.descProduto.Substring(0, 400) + "...";
+                                    }
+                                }
+                                @Html.ActionLink(strDescProduto, "Detalhes", "Produto", new { id = Model.idProduto }, new { @class = "text-muted", title = Model.descProduto })
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 panelBottom">
+                        
+                        <div class="col-md-4 text-center">
+                            <button type="button" class="add-cart btn btn-lg btn-add-to-cart" data-product-id="@Model.idProduto" data-product-name="@Model.nomeProduto" data-product-price="@Model.precProduto">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>Comprar
+                            </button>
+                        </div>
+
+                        <div class="col-md-8 text-left" style="margin-top:10px  ">
+                            <h5><span class="itemPriceDest">
+                                @{
+                                    decimal decPreco = Model.precProduto - (decimal)Model.descontoPromocao;
+                                    if (Model.descontoPromocao > 0)
+                                    {
+                                        <p class="text-">De: @string.Format("{0:c}", Model.precProduto) | Por: <b> @string.Format("{0:c}", decPreco)</b></p>
+                                    }
+                                    else
+                                    {
+                                        <p>@string.Format("{0:c}", decPreco)</p>
+                                    }
+                                }                                
+                            </span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+

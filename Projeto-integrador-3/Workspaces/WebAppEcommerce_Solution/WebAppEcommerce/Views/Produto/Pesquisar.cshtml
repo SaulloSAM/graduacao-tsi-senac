@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebAppEcommerce.Models.Produto>
+@{
+    ViewBag.Title = string.Format("{0}", ViewBag.Categoria);
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+               
+                @Html.ActionLink(item.nomeProduto, "Detalhes", "Produto",
+new { id = item.idProduto },
+new { title = item.nomeProduto })
+            </td>
+            <td>
+                @{
+                    string descrProduto = item.descProduto;
+                    if (descrProduto.Length > 30)
+                    {
+                        descrProduto = descrProduto.Substring(0, 30) + "...";
+                    }
+                }
+                @Html.ActionLink(descrProduto, "Detalhes", "Produto",
+                new { id = item.idProduto },
+                new { title = item.descProduto })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descontoPromocao)
+            </td>
+            <td>
+                @{
+                    string imgProd = string.Empty;
+                    string nomeProd = string.Empty;
+                    if (item.imagem != null)
+                    {
+                        string strImg = Convert.ToBase64String(item.imagem);
+                        imgProd = "data:image/png;base64," + strImg;
+                    }
+                    else
+                    {
+                        imgProd = "~/img/default_product.png";
+                    }
+                    nomeProd = item.nomeProduto;
+                }
+                <img draggable="true" src=@imgProd
+                     id="product-image-@item.idProduto"
+                     class="img-responsive" alt="@nomeProd"
+                     title="@nomeProd" width="100" />
+            </td>
+        </tr>
+                    }
+
+</table>
+
+
